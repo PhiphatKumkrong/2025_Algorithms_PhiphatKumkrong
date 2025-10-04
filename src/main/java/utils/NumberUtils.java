@@ -7,7 +7,11 @@ public class NumberUtils {
     //• Returns: an int (the position)
     //Write a JavaDoc for this method.
 
-
+    /**
+     * @param nums the array to searched
+     * @param pos the position that looking for
+     * @return the first position of a supplied int in an array
+     */
     public static int getPos(int[] nums, int pos) {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == pos){
@@ -20,6 +24,7 @@ public class NumberUtils {
 //    Write a static method called getLastPos() in NumberUtils that finds the last position of a supplied int in an array.
 //    • Parameters: An array of ints and a single int
 //    • Returns: an int (the position)
+
 public static int getLastPos(int[] nums, int lastPosition) {
     for (int i = nums.length -1; i >= 0; i--){
         if (nums[i] == lastPosition){
