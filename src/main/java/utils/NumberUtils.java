@@ -25,7 +25,13 @@ public class NumberUtils {
 //    • Parameters: An array of ints and a single int
 //    • Returns: an int (the position)
 
-public static int getLastPos(int[] nums, int lastPosition) {
+    /**
+     *
+     * @param nums the array to be seached from input
+     * @param lastPosition looking for value that will be the last position
+     * @return the last position of an array that have in supplied
+     */
+    public static int getLastPos(int[] nums, int lastPosition) {
     for (int i = nums.length -1; i >= 0; i--){
         if (nums[i] == lastPosition){
             return i;
