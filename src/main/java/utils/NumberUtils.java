@@ -1,5 +1,7 @@
 package utils;
 
+import java.util.Arrays;
+
 public class NumberUtils {
     //Exercise 1:
     //Write a static method called getPos() in NumberUtils that finds the first position of a supplied int in an array.
@@ -46,6 +48,13 @@ return -1;
     //• Parameters: Two arrays of ints
     //• Returns: a boolean
     //Write a JavaDoc for this method.
+
+    /**
+     *
+     * @param nums1 taking first data that was in supplied arrays for comparing
+     * @param nums2 taking the second data that will be compared with the first data
+     * @return boolean true if the data both arrays are the same and will return fail if the data or length are not same
+     */
     public static boolean isIdentical(int[] nums1, int[] nums2) {
 
         if (nums1 == null && nums2 == null){
@@ -57,7 +66,6 @@ return -1;
         if (nums1.length != nums2.length){
             return false;
         }
-
         for (int i = 0; i < nums1.length; i++) {
             if (nums1[i] != nums2[i]) {
                 return false;
@@ -65,6 +73,43 @@ return -1;
         }
         return true;
     }
+//    Exercise 4:
+//    Write a static method called isEqual() in NumberUtils that determines if two supplied arrays of
+//    ints contain the same information (this can be in the same or different order). Note: You MAY use Arrays.sort() to carry out this logic. •
+//    Parameters: Two arrays of ints
+//    •	Returns: a boolean
+
+    /**
+     * check weather if the two int arrays contain the same value with the same count and ignoring order
+     *
+     * @param nums1 first array may be null or may contain value
+     * @param nums2 second array may be null or may contain value
+     * the two arrays will be sorted in place using Arrays.sort before comparing
+     * @return true if the both array contain the same data or different order, otherwise will be false
+     */
+
+    public static  boolean isEqual(int[] nums1, int[] nums2) {
+
+    if (nums1 == null && nums2 == null){
+        return true;
     }
+    if (nums1 == null ||  nums2 == null){
+        return false;
+    }
+    if (nums1.length != nums2.length){
+        return false;
+    }
+    Arrays.sort(nums1);
+    Arrays.sort(nums2);
+
+    for (int i = 0; i < nums1.length; i++) {
+        if (nums1[i] != nums2[i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+}
 
 
