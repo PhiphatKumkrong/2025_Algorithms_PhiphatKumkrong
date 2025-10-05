@@ -110,7 +110,7 @@ public class NumberUtils {
 
         return true;
     }
-
+//    Exercise 5:
     //    Write a static method called isSubset() in NumberUtils that determines if the first supplied arrays of ints is a subset of the second
 //    supplied array (all data from one array is found somewhere in the other).
 //    Note: A subset cannot contain the same number of elements as the original set.
@@ -135,6 +135,25 @@ public class NumberUtils {
         }
         return true;
     }
-}
+    //Exercise 6:
+//    Write a static method called getMax() in NumberUtils that returns the largest number in a supplied array.
+//            •	Parameters: An array of ints and a single int
+//•	Returns: an int (the position) Write a JavaDoc for this method.
+
+    /**
+     *
+     * @param nums will store the value that is in an supplies array
+     * @return will return the largest value that was store in an array that been searched
+     */
+    public static int getMax(int[] nums) {
+        int max = nums[0];
+        for (int i : nums){
+            if (i >= max){
+                max = i;
+            }
+        }
+        return max;
+        }
+    }
 
 
