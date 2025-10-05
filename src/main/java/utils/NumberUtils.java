@@ -39,6 +39,19 @@ public class NumberUtils {
         }
 return -1;
     }
+
+    //Exercise 3:
+    //Write a static method called isIdentical() in NumberUtils that determines if two supplied arrays of ints are
+    //identical (the same data in the same order).
+    //• Parameters: Two arrays of ints
+    //• Returns: a boolean
+    //Write a JavaDoc for this method.
+    public static boolean isIdentical(int[] nums1, int[] nums2) {
+        if (nums1.length != nums2.length){
+            return false;
+        }
+        return true;
+    }
 }
 
 
