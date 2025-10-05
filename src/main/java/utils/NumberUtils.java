@@ -47,11 +47,16 @@ return -1;
     //• Returns: a boolean
     //Write a JavaDoc for this method.
     public static boolean isIdentical(int[] nums1, int[] nums2) {
-        if (nums1.length != nums2.length){
+        if (nums1.length != nums2.length) {
             return false;
+        }
+        for (int i = 0; i < nums1.length; i++) {
+            if (nums1[i] != nums2[i]) {
+                return false;
+            }
         }
         return true;
     }
-}
+    }
 
 
